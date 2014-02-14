@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NhibernateSqlServer" namespace="NhibernateSqlServer.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="User" table="users" lazy="false" >
+    <id name="Id" column="id">
+      <generator class="identity" />
+    </id>
+    <property name="Username">
+      <column name="username" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Password">
+      <column name="password" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Userrole">
+      <column name="userrole" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Email">
+      <column name="email" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Notes">
+      <column name="notes" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NhibernateSqlServer" namespace="NhibernateSqlServer.Model" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Topics" table="topics" lazy="false" >
+    <id name="Id" column="id" />
+    <property name="Language">
+      <column name="language" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Skill">
+      <column name="skill" sql-type="int" not-null="true" />
+    </property>
+    <property name="Note">
+      <column name="note" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Isoutofdate">
+      <column name="isoutofdate" sql-type="bit" not-null="true" />
+    </property>
+    <property name="Iscuttingedge">
+      <column name="iscuttingedge" sql-type="bit" not-null="true" />
+    </property>
+    <property name="Description">
+      <column name="description" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Picture">
+      <column name="picture" sql-type="varbinary" not-null="true" />
+    </property>
+    <property name="Recruiter">
+      <column name="recruiter" sql-type="nvarchar" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>
